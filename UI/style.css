@@ -7,13 +7,15 @@ body{
     background-image: url(images/bg.jpg);
     margin: auto;
     padding: auto;
+    font-family: sans-serif;
+    width: 1200px;
 }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #241F1F;
-    margin: 3rem 5rem;
+    
     padding: 3rem;
    
 }
@@ -54,12 +56,13 @@ body{
     display: flex;
     justify-content: center;
     justify-items: center;
+    background-color: #333533;
+    padding-top: 40px;
 }
 .home-content{
     font-size: 1.5rem;
     color: #fff;
     width: 400px;
-    height: 100vh;
 }
 #name{
     padding-top: 40px;
@@ -72,11 +75,65 @@ span{
     margin-top: 0px;
 }
 .hire-btn{
-    padding: 8px 14px;
+    padding: 6px 14px;
     margin-left: 60px;
     color: #fff;
     background-color:#429C7C;
     border:none;
 }
+.about-page{
+    color: #fff;
+}
+.about,.stack{
+    text-align: center;
+    
+   
+}
+.about{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.stack{
+    margin-bottom: 20px;
+}
+.html,.css,.javascript{
+    text-align: center;
+    width: 300px;
+    
+}
 
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.paragraph{
+    margin-right: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.education{
+background-color: #f0e6ef;
+color: rgb(8, 8, 8);
+width: 300px;
+padding: 20px;
+line-height: 25px;
+
+}
+.experience{
+    background-color: #bcb8b1;
+    width: 300px;
+    padding: 20px;
+    color: rgb(8,8,8);
+    line-height: 25px;
+}
