@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images/bg.jpg);
+    margin: auto;
+    padding: auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #241F1F;
+    margin: 3rem 5rem;
+    padding: 3rem;
+   
+}
+.logo{
+    font-size: 1.2rem;
+    color: #429C7C;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: sans-serif;
+    cursor: default;
+}
+.navigation a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(245, 235, 235);
+    margin-right: 1.2rem;
+    font-family: sans-serif;
+}
+.navigation a:hover,
+.navigation a:active{
+    color: #429C7C;
+    transition: .3s;
+}
+
+.navbtn{
+    display: flex;
+}
+.login{
+    color: #fff;
+    background-color: #429C7C;
+    padding: 4px 16px;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    border: 0.1px solid #fff;
+    border-radius: 6px;cursor: pointer;
+}
+.home-page{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.home-content{
+    font-size: 1.5rem;
+    color: #fff;
+    width: 400px;
+    height: 100vh;
+}
+#name{
+    padding-top: 40px;
+}
+span{
+    color: #D1B5FF;
+}
+.my-photo img{
+    width: 400px;
+    margin-top: 0px;
+}
+.hire-btn{
+    padding: 8px;
+    margin-left: 60px;
+}
+
+
