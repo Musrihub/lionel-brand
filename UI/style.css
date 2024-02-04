@@ -68,12 +68,15 @@ span{
     color: #D1B5FF;
 }
 .my-photo img{
-    width: 400px;
+    width: 300px;
     margin-top: 0px;
 }
 .hire-btn{
-    padding: 8px;
+    padding: 8px 14px;
     margin-left: 60px;
+    color: #fff;
+    background-color:#429C7C;
+    border:none;
 }
 
 
