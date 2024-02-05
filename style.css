@@ -4,19 +4,24 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(images/bg.jpg);
+    /* background-image: url(images/bg.jpg); */
+    background-image: url(images/bg3.jpg);
     margin: auto;
     padding: auto;
     font-family: sans-serif;
     width: 1000px;
 }
 .header{
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #241F1F;
     
     padding: 3rem;
+
    
 }
 .logo{
@@ -26,6 +31,7 @@ body{
     font-weight: 600;
     font-family: sans-serif;
     cursor: default;
+    margin-right: 243.3px;
 }
 .navigation a{
     font-size: 1rem;
@@ -34,10 +40,12 @@ body{
     margin-right: 1.2rem;
     font-family: sans-serif;
 }
-.navigation a:hover,
-.navigation a:active{
+.navigation a:hover{
     color: #429C7C;
     transition: .3s;
+}
+.navigation a:active{
+    color: #429C7C;
 }
 
 .navbtn{
@@ -57,13 +65,17 @@ body{
     justify-content: center;
     justify-items: center;
     background-color: #333533;
-    padding-top: 40px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    margin-top: 120px;
     
 }
+
 .home-content{
     font-size: 24px;
     color: #fff;
     width: 400px;
+
     
    
 }
@@ -87,6 +99,7 @@ span{
     background-color:#429C7C;
     border:none;
     border-radius: 4px;
+    font-size: 1rem;
 }
 .about-page{
     color: #fff;
@@ -149,12 +162,13 @@ line-height: 25px;
     background-color: #242423;
     margin-top: 40px;
     color: #fff;
+    padding-bottom: 40px;
 }
 
 .service h1{
     text-align: center;
     padding-top: 40px;
-
+    
 }
 .service-details{
     display: flex;
@@ -212,4 +226,47 @@ i{
     border-radius: 4px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.portfolio-page{
+    background-color: #353535;
+    padding-bottom: 60px;
+}
+.portfolio-page h1{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    color: #fff;
+
+}
+.portfolio-page li,h2{
+margin-left: 400px;
+color: #fff;
+
+}
+.portfolio-page li{
+    letter-spacing: 1.5px;
+}
+.portfolio-page h2{
+    margin-bottom: 10px;
+}
+.portfolio-page h3{
+    line-height: 30px;
+}
+.portfolio-page img{
+    width: 400px;
+    height: 300px;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.portfolio-page p{
+    width: 400px;
+    padding-left: 40px;
+    color: #fff;
+    line-height: 25px;
+    margin-top: 20px;
 }
