@@ -3,24 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-     background-image: url(images/bg.jpg); 
-    /* background-image: url(images/bg3.jpg); */
+      background-image: url(images/bg.jpg); 
+    /* background-image: url(images/bg3.jpg);  */
     margin: auto;
     padding: auto;
-    font-family: sans-serif;
-    width: 1000px;
+    font-family: sans-serif; 
+    
+   
 }
 .header{
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     background-color: #241F1F;
     
-    padding: 3rem;
+    padding: 2.8rem;
 
    
 }
@@ -58,17 +62,18 @@ body{
     margin-left: 3rem;
     font-size: 1.2rem;
     border: 0.1px solid #fff;
-    border-radius: 6px;cursor: pointer;
+    border-radius: 6px;
+    cursor: pointer;
+}
+section{
+    padding: 6rem 5rem;
 }
 .home-page{
     display: flex;
     justify-content: center;
     justify-items: center;
     background-color: #333533;
-    padding-top: 60px;
-    padding-bottom: 100px;
     margin-top: 120px;
-    
 }
 
 .home-content{
@@ -159,7 +164,7 @@ line-height: 25px;
     color: rgb(8,8,8);
     line-height: 25px;
 }
-.service{
+.service-page{
     background-color: #242423;
     margin-top: 40px;
     color: #fff;
@@ -231,7 +236,7 @@ i{
 }
 .portfolio-page{
     background-color: #353535;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
 }
 .portfolio-page h1{
     text-align: center;
@@ -241,7 +246,7 @@ i{
 
 }
 .portfolio-page li,h2{
-margin-left: 400px;
+margin-left: 600px;
 color: #fff;
 
 }
@@ -255,18 +260,18 @@ color: #fff;
     line-height: 30px;
 }
 .portfolio-page img{
-    width: 400px;
-    height: 300px;
+    width: 250px;
+    height: 200px;
     margin-top: 40px;
     padding-left: 40px;
-}
-.project{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     
 }
+.project{
+   display: flex;  
+   justify-content: center;
+}
 .portfolio-page p{
-    width: 400px;
+    width: 250px;
     padding-left: 40px;
     color: #fff;
     line-height: 25px;
@@ -276,8 +281,6 @@ color: #fff;
     color: #fff;
     text-align: center;
     background-color: #161a1d;
-    padding-top: 40px;
-    padding-bottom: 40px;
 }
 .blog-page h1{
     margin-bottom: 40px;
@@ -317,7 +320,7 @@ padding: 40px;
 }
 .contact-page{
     background-color: #343a40;
-    padding-bottom: 40px;
+    
 }
 .contact-page h1{
     text-align: center;
@@ -371,3 +374,7 @@ textarea{
     margin-top: 10px;
     cursor: pointer;
 }
+.bxl-facebook-circle{
+    margin-left: 650px;
+}
+
