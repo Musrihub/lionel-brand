@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(images/bg3.jpg);
+}
+article {
+  text-align: center;
+  /* background-color: #202020; */
+
+  margin: auto 600px;
+  padding: 80px;
+  margin-top: 80px;
+}
+h1 {
+  padding-bottom: 20px;
+  color: #fff;
+}
+input {
+  display: block;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  background-color: rgb(211, 208, 208);
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+}
+.btn {
+  color: #fff;
+  background-color: rgb(50, 85, 72);
+  padding: 6px 18px;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+}
+a:link {
+  font-size: 16px;
+}
