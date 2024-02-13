@@ -38,13 +38,66 @@ img {
 
 aside ul li {
   list-style: none;
+  background-color: #f8f9fa;
+  width: 150px;
+  margin-right: 300px;
 }
 a:link {
   text-decoration: none;
   display: block;
   margin: 20px;
 }
+a:hover {
+  color: black;
+}
 .aside-menu {
-  background-color: #f8f9fa;
-  width: 150px;
+  display: flex;
+}
+.dashbtn {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.btn {
+  color: white;
+  font-size: 40px;
+  background-color: rgb(145, 162, 173);
+  width: 300px;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(187, 185, 185);
+}
+i {
+  margin-right: 12px;
+}
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 320px;
+}
+table {
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: 40px;
+}
+tr {
+  padding: 15px;
+}
+th,
+td {
+  padding: 10px 20px;
+}
+.view {
+  color: blue;
+  border: none;
+  cursor: pointer;
+}
+.delete {
+  color: rgb(247, 6, 6);
+  cursor: pointer;
+  border: none;
 }
