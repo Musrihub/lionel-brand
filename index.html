@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>landing page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <header class="header">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-desk">
         <a class="logo" href="#">LIONEL N.</a>
-        <div class="navbtn">
-        <nav class="navigation">
-            <a class="home"  href="#home">Home</a>
+      </div>
+      <div class="logo-div">
+        <a class="logo" href="#">LIONEL N.</a>
+        <a href="#" class="icon humbergerBtn">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="navbtn">
+        <div>
+          <div class="navigation">
+            <a class="home" href="#home">Home</a>
             <a class="about" href="#about">About</a>
             <a class="service" href="#service">Services</a>
             <a class="portfolio" href="#portfolio">Portfolio</a>
             <a class="blog" href="#blogs">Blogs</a>
             <a class="contact" href="#contact">Contact</a>
-            
-        </nav>
-       <a href="login.html"> <button class="login">Login</button></a>
+            <a href="login.html"> <button class="login">Login</button></a>
+          </div>
+          <div class="mobile-navigation">
+            <div class="mobile-nav">
+              <div class="home"><a href="#home">Home</a></div>
+              <div class="about"><a href="#about">About</a></div>
+              <div class="service"><a href="#service">Services</a></div>
+              <div class="portfolio"><a href="#portfolio">Portfolio</a></div>
+              <div class="blog"><a href="#blogs">Blogs</a></div>
+              <div class="contact"><a href="#contact">Contact</a></div>
+              <div>
+                <a href="login.html"> <button class="login">Login</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </header>
+    <script src="index.js"></script>
     <div class="container">
-    <section class="home-page" id="home">
+      <section class="home-page" id="home">
         <div class="home-content">
-            <p>
-                Hello, it’s me
-                </p>
-                <p id="name">
-
-<span>Lionel NTIRUSHWA</span> as a software developer , I’m here to make your business look great!
-
-            </p> 
-            <button class="hire-btn">Hire Me</button>
+          <div class="desc-name">
+            <p>Hello, it’s me</p>
+            <p id="name">
+              <span>Lionel NTIRUSHWA</span> as a software developer , I’m here
+              to make your business look great!
+            </p>
+            <div>
+              <button class="hire-btn">Hire Me</button>
             </div>
-            <div  class="my-photo">
-            <img src="images/lionel.jpg" alt="This is my picture">
-            </div>
+          </div>
 
-    </section>
+          <div class="my-photo">
+            <img
+              class="picture"
+              src="images/lionel.jpg"
+              alt="This is my picture"
+            />
+          </div>
+        </div>
+      </section>
 
-    <section class="about-page" id="about">
-        <h1 class="about">About</h1>
+      <section class="about-page" id="about">
+        <h1 class="about-p">About</h1>
             <h3 class="stack">My Stack</h3>
             <div class="about-content">
                 <div class="html">
@@ -94,8 +129,8 @@
                 </ul>
             </div>
         </div>
-    </section>
-    <section class="service-page" id="service">
+    </section> 
+   <section class="service-page" id="service">
         <h1>Our Services</h1>
         <div class="service-details">
             <div class="software-dev">
@@ -123,7 +158,8 @@
             </div>
 
         </div>
-    </section>
+    </section> 
+    
     <section class="portfolio-page" id="portfolio">
         <h1>My Work</h1>
         <h4>I have worked on projects like:</h4>
@@ -164,15 +200,25 @@
         <div class="online-coding">
             <div class="html-coding">
                 <P>How to learn HTML faster</P>
-                <a href="#">Start</a>
+                <a class="blogpost" href="#">Start</a>
+                <i class='bx bxs-message-rounded-dots' style='color:#a8a3a3' ></i>
+                <i class='bx bxs-heart' style='color:#a8a3a3' ></i>
+                <span class="likes" style="color: red;">0</span>
             </div>
             <div class="css-coding">
                 <P>How to learn CSS faster</P>
-                <a href="#">Start</a>
+                <a class="blogpost" href="#">Start</a>
+                <i class='bx bxs-message-rounded-dots' style='color:#a8a3a3' ></i>
+
+                <i class='bx bxs-heart' style='color:#a8a3a3' ></i>
+                <span class="likes" style="color: red;">0</span>
             </div>
             <div class="js-coding">
                 <P>How to learn JS faster</P>
-                <a href="#">Start</a>
+                <a class="blogpost" href="#">Start</a>
+                <i class='bx bxs-message-rounded-dots' style='color:#a8a3a3' ></i>
+                <i class='bx bxs-heart' id="heart" style='color:#a8a3a3' ></i>
+                <span class="likes" style="color: red;">0</span>
             </div>
         </div>
     </section>
@@ -182,16 +228,19 @@
             <div class="phone">
                 <i class='bx bx-phone'></i>
                 <p>+250785374312</p>
-                <input type="text" placeholder="name"><br>
-                <input type="email" placeholder="email"><br>
-                <input type="subject" placeholder="subject">
+                <input class="input-name" type="text" placeholder="name"><br>
+                <span id="name-error" class="error"></span>
+                <input class="input-email"  type="email" placeholder="email"><br>
+                <span id="email-error" class="error"></span>
+                <input class="input-subject" type="subject" placeholder="subject">
+                <span id="subject-error" class="error"></span>
 
             </div>
             <div class="email">
                 <i class='bx bxs-envelope' ></i>
                 <p>linog02@gmail.com</p>
                 <textarea name="" id="" cols="30" rows="10"></textarea><br>
-                <button class="message">Send message</button>
+                <button class="message" type="submit">Send Message</button>
             </div>
         </div>
         <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
@@ -208,6 +257,8 @@
         </div>
         <footer>Copyright &copy; 2024 by Lionel</footer>
 
-
-</body>
+  </body>
+</html> 
+    </div>
+  </body>
 </html>

@@ -35,8 +35,57 @@ body {
   font-family: sans-serif;
   cursor: default;
   margin-right: 243.3px;
+  display: inline-block;
+  white-space: nowrap;
 }
-.navigation a {
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation .home {
+  margin-right: 20px;
+  color: rgb(245, 235, 235);
+  font-size: 1rem;
+  text-decoration: none;
+
+  margin-right: 1.2rem;
+  font-family: sans-serif;
+}
+.navigation .about {
+  margin-right: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(245, 235, 235);
+  margin-right: 1.2rem;
+  font-family: sans-serif;
+}
+.navigation .service {
+  margin-right: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(245, 235, 235);
+  margin-right: 1.2rem;
+  font-family: sans-serif;
+}
+.navigation .portfolio {
+  margin-right: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(245, 235, 235);
+  margin-right: 1.2rem;
+  font-family: sans-serif;
+}
+.navigation .contact {
+  margin-right: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(245, 235, 235);
+  margin-right: 1.2rem;
+  font-family: sans-serif;
+}
+.navigation .blog {
+  margin-right: 20px;
   font-size: 1rem;
   text-decoration: none;
   color: rgb(245, 235, 235);
@@ -58,7 +107,7 @@ body {
   color: #fff;
   background-color: #429c7c;
   padding: 4px 16px;
-  margin-left: 3rem;
+
   font-size: 1.2rem;
   border: 0.1px solid #fff;
   border-radius: 6px;
@@ -69,17 +118,26 @@ section {
   padding: 6rem 5rem;
 }
 .home-page {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
   background-color: #333533;
-  margin-top: 120px;
+  /* margin-top: 120px; */
 }
 
 .home-content {
+  display: flex;
+  justify-content: center;
   font-size: 24px;
   color: #fff;
+  margin-top: 9rem;
+}
+.desc-name {
   width: 400px;
+  margin-right: 40px;
+}
+.my-photo {
+  margin-left: 40px;
+}
+.picture {
+  border-radius: 5px;
 }
 #name {
   padding-top: 40px;
@@ -106,11 +164,11 @@ span {
   color: #fff;
   margin-top: 60px;
 }
-.about,
+.about-p,
 .stack {
   text-align: center;
 }
-.about {
+.about-p {
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -297,8 +355,10 @@ h4 {
   padding: 40px;
 }
 
-.html-coding a {
-  padding-bottom: 40px;
+.blogpost {
+  display: block;
+
+  background-color: #8d99ae;
 }
 .contact-page {
   background-color: #343a40;
@@ -352,6 +412,9 @@ textarea {
   margin-top: 10px;
   cursor: pointer;
 }
+.error {
+  color: red;
+}
 .bxl-facebook-circle {
   margin-left: 550px;
 }
@@ -378,4 +441,69 @@ footer {
   text-align: center;
   padding: 24px;
   font-size: 24px;
+}
+.mobile-navigation {
+  display: none;
+}
+.logo-desk {
+  display: flex;
+}
+.logo-div {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+  .mobile-navigation {
+    display: block !important;
+  }
+  .icon {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 25px;
+  }
+  .mobile-navigation a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(245, 235, 235);
+    margin-right: 1.2rem;
+    font-family: sans-serif;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .home {
+    padding-top: 20px !important;
+  }
+  .about {
+    padding-top: 20px;
+  }
+  .service {
+    padding-top: 20px;
+  }
+  .portfolio {
+    padding-top: 20px;
+  }
+  .blog {
+    padding-top: 20px;
+  }
+  .contact {
+    padding-top: 20px;
+  }
+  .login {
+    margin-top: 20px;
+  }
+  .logo-desk {
+    display: none;
+  }
+  .logo-div {
+    display: block;
+  }
+  .home-content {
+    display: block;
+    width: auto;
+  }
 }
