@@ -25,7 +25,6 @@ function isFormValid() {
 }
 
 function validateForm() {
-  //USERNAME
   if (usernameInput.value.trim() == "") {
     setError(usernameInput, "Name can not be empty");
   } else if (usernameInput.value.trim().length < 4) {
@@ -33,7 +32,7 @@ function validateForm() {
   } else {
     setSuccess(usernameInput);
   }
-  //EMAIL
+
   if (emailInput.value.trim() == "") {
     setError(emailInput, "email can not be empty");
   } else if (isEmailValid(emailInput.value)) {
@@ -42,7 +41,6 @@ function validateForm() {
     setError(emailInput, "email can not be empty ");
   }
 
-  //PASSWORD
   if (passwordInput.value.trim() == "") {
     setError(passwordInput, "Password can not be empty");
   } else if (
@@ -53,7 +51,7 @@ function validateForm() {
   } else {
     setSuccess(passwordInput);
   }
-  //CONFIRM PASSWORD
+
   if (confirmPasswordInput.value.trim() == "") {
     setError(confirmPasswordInput, "Password can not be empty");
   } else if (confirmPasswordInput.value !== passwordInput.value) {

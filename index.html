@@ -58,7 +58,7 @@
         <div class="home-content">
           <div class="desc-name">
             <p>Hello, it’s me</p>
-            <p id="name">
+            <p id="nameL">
               <span>Lionel NTIRUSHWA</span> as a software developer , I’m here
               to make your business look great!
             </p>
@@ -222,27 +222,28 @@
             </div>
         </div>
     </section>
-    <section class="contact-page" id="contact">
-        <h1>Contact Me</h1>
-        <div class="form-details">
-            <div class="phone">
-                <i class='bx bx-phone'></i>
-                <p>+250785374312</p>
-                <input class="input-name" type="text" placeholder="name"><br>
-                <span id="name-error" class="error"></span>
-                <input class="input-email"  type="email" placeholder="email"><br>
-                <span id="email-error" class="error"></span>
-                <input class="input-subject" type="subject" placeholder="subject">
-                <span id="subject-error" class="error"></span>
-
-            </div>
-            <div class="email">
-                <i class='bx bxs-envelope' ></i>
-                <p>linog02@gmail.com</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea><br>
-                <button class="message" type="submit">Send Message</button>
-            </div>
-        </div>
+    
+   
+<section class="contact-page" id="contact">
+    <div class="container-contact">
+        <h2 class="hesding2">Contact Me</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="name-text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="email-text" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="contact-button" type="submit">Send message</button>
+        </form>
+      </div>
+</section>
         <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
         <a href="#"><i class='bx bxl-twitter' ></i></a>
         <a href="#"><i class='bx bxl-instagram' ></i>

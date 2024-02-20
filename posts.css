@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(240, 245, 245);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 20px;
+  background-color: #0d9e3e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.delete {
+  background-color: rgb(187, 14, 14);
+}
+.delete:hover {
+  background-color: rgb(133, 67, 67);
+}
+.edit {
+  background-color: rgb(8, 8, 190);
+}
+.edit:hover {
+  background-color: rgb(45, 45, 104);
+}
+button:hover {
+  background-color: #1e773a;
+}
+
+.blog-post {
+  margin-bottom: 20px;
+  border-bottom: 5px solid #0d9e3e;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.blog-post button {
+  margin-left: 12px;
+}
+.update {
+  display: none;
+}

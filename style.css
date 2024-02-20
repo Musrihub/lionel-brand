@@ -139,7 +139,7 @@ section {
 .picture {
   border-radius: 5px;
 }
-#name {
+#nameL {
   padding-top: 40px;
 }
 span {
@@ -360,60 +360,59 @@ h4 {
 
   background-color: #8d99ae;
 }
-.contact-page {
-  background-color: #343a40;
+
+.container-contact {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.contact-page h1 {
+
+.hesding2 {
   text-align: center;
-  color: #fff;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-bottom: 20px;
 }
-.form-details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #2f3e46;
-  width: fit-content;
-  margin: auto;
-  padding-bottom: 40px;
+
+.form-group {
+  margin-bottom: 20px;
 }
-.phone {
-  margin-right: 80px;
-  padding-left: 40px;
-  color: #fff;
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.email {
-  padding-right: 40px;
-  color: #fff;
-  padding-top: 40px;
-}
-.bx {
-  margin-left: 60px;
-  margin-bottom: 10px;
-  background-color: #2f3e46;
-}
-input {
-  padding: 8px;
-  margin-top: 20px;
-  width: 250px;
-}
+
+.name-text[type="text"],
+.email-text[type="email"],
 textarea {
-  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-.message {
-  padding: 6px;
-  background-color: #429c7c;
+.name-text {
+}
+
+textarea {
+  resize: vertical;
+}
+
+.contact-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #24a871;
   color: #fff;
-  font-size: 16px;
-  margin-left: 50px;
   border: none;
-  border-radius: 4px;
-  margin-top: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
-.error {
-  color: red;
+
+.contact-button:hover {
+  background-color: #34694c;
 }
 .bxl-facebook-circle {
   margin-left: 550px;
@@ -422,6 +421,7 @@ textarea {
   background-color: #429c7c;
   padding-bottom: 18px;
   text-align: center;
+  margin-top: 40px;
 }
 .subscribe-text {
   display: inline;

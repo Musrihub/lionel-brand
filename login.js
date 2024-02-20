@@ -1,8 +1,6 @@
 const form = document.querySelector("#create-account-form");
-const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
-const confirmPasswordInput = document.querySelector("#confirm-password");
 
 form.addEventListener("submit", (event) => {
   validateForm();
@@ -25,7 +23,6 @@ function isFormValid() {
 }
 
 function validateForm() {
-  //EMAIL
   if (emailInput.value.trim() == "") {
     setError(emailInput, "email can not be empty");
   } else if (isEmailValid(emailInput.value)) {
@@ -34,7 +31,6 @@ function validateForm() {
     setError(emailInput, "email can not be empty ");
   }
 
-  //PASSWORD
   if (passwordInput.value.trim() == "") {
     setError(passwordInput, "Password can not be empty");
   } else if (passwordInput.value.trim().length < 8) {
@@ -68,3 +64,20 @@ function isEmailValid(email) {
 
   return reg.test(email);
 }
+
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   const userName = emailInput.value;
+//   const password = passwordInput.value;
+
+//   if (authenticate(userName, password)) {
+//     alert("login successful!");
+//     localStorage.setItem("isLoggedIn", "true");
+//   } else {
+//     alert("ivalid username or password");
+//   }
+// });
+
+// function authenticate(userName, password) {
+//   return userName === "admin" && password === "password";
+// }

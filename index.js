@@ -8,34 +8,25 @@ document.querySelector(".humbergerBtn").addEventListener("click", function () {
   }
 });
 
-const likebtn = document.querySelector("#heart");
-const likesSpan = document.querySelector(".likes");
-let likesCount = 0;
-let isLiked = true;
+const form = document.querySelector("#contact-form");
+const sendMessage = document.querySelector(".contact-button");
 
-likebtn.addEventListener("click", function () {
-  if (isLiked) {
-    likesCount++;
-    likesSpan.innerHTML = likesCount;
-  }
-});
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-//contact form validation
+  let nameInput = document.getElementById("name");
+  let emailInput = document.getElementById("email");
+  let messageInput = document.getElementById("message");
 
-const form = document.querySelector(".contact-page");
-const nameInput = document.querySelector(".input-name");
-const emailInput = document.querySelector(".input-email");
-const nameError = document.getElementById("name-error");
-const emailError = document.getElementById("email-error");
+  let name = nameInput.value;
+  let email = emailInput.value;
+  let message = messageInput.value;
 
-form.addEventListener("submit", function (event) {
-  let isValid = true;
-  if (nameInput.ariaValueMax.trim() === "") {
-    nameError.textContent = "Name is required";
-    isValid = false;
-  } else {
-  }
-  if (!isValid) {
-    event.preventDefault();
-  }
+  localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("message", message);
+
+  form.reset();
+
+  alert("Message sent successfully!");
 });
