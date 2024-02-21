@@ -65,19 +65,20 @@ function isEmailValid(email) {
   return reg.test(email);
 }
 
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault();
-//   const userName = emailInput.value;
-//   const password = passwordInput.value;
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const userName = emailInput.value;
+  const password = passwordInput.value;
 
-//   if (authenticate(userName, password)) {
-//     alert("login successful!");
-//     localStorage.setItem("isLoggedIn", "true");
-//   } else {
-//     alert("ivalid username or password");
-//   }
-// });
+  const correctEmail = "linog02@gmail.com";
+  const correcPassword = "1234567890";
 
-// function authenticate(userName, password) {
-//   return userName === "admin" && password === "password";
-// }
+  if (userName === correctEmail && password === correcPassword) {
+    localStorage.setItem("isLoggedIn", "true");
+    alert("login successfull");
+    window.location.href =
+      "file:///C:/Users/User/UI/MY-BRAND-LIONEL/dashboard.html";
+  } else {
+    alert("incorrect username or password");
+  }
+});
