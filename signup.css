@@ -82,3 +82,6 @@ body {
   text-transform: uppercase;
   border: none;
 }
+.signup-error {
+  color: red;
+}

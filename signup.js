@@ -3,15 +3,37 @@ const usernameInput = document.querySelector("#username");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const confirmPasswordInput = document.querySelector("#confirm-password");
+const signUpError = document.querySelector(".signup-error");
+let users = JSON.parse(localStorage.getItem("users")) || [];
+const basePath = window.location.href.split("/").slice(0, -1).join("/") + "/";
 
 form.addEventListener("submit", (event) => {
+  event.preventDefault();
   validateForm();
   if (isFormValid() == true) {
-    form.submit();
+    const newUser = {
+      id: generateId(),
+      name: usernameInput.value,
+      email: emailInput.value,
+      password: passwordInput.value,
+    };
+    const userExist = users.find((user) => user.email === emailInput.value);
+    if (!userExist) {
+      users.push(newUser);
+      localStorage.setItem("users", JSON.stringify(users));
+      //  window.location.href = `${basePath}login.html`;
+    } else {
+      signUpError.innerHTML = "User Already Exist";
+    }
   } else {
-    event.preventDefault();
+    console.log("signup !!!!!!!!!!!!!!! failed");
   }
 });
+function generateId() {
+  const timeStamp = new Date().getTime();
+  const randomNum = Math.random().toString(36).substr(2, 9);
+  return `${timeStamp} + ${randomNum}`;
+}
 
 function isFormValid() {
   const inputContainers = form.querySelectorAll(".input-group");

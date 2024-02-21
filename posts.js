@@ -7,7 +7,7 @@ const textInputUpdate = document.querySelector(".textInputUpdate");
 const formUpdate = document.querySelector(".blogFormUpdate");
 const blogPostUpdate = document.querySelector(".blogPostsUpdate");
 const update = document.querySelector(".blogFormUpdate");
-
+window.updateId = "";
 let blogPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
 
 function displayBlogPosts() {
@@ -48,9 +48,10 @@ function deleteBlogPost(postId) {
   localStorage.setItem("blogPosts", JSON.stringify(blogPosts));
   displayBlogPosts();
 }
-let updateId;
+
 function editBlogPost(postId) {
-  updateId = postId;
+  window.updateId = postId;
+
   const postToEdit = blogPosts.find((post) => post.id === postId);
   if (postToEdit) {
     console.log(postToEdit);
@@ -62,12 +63,13 @@ function editBlogPost(postId) {
     document.querySelector(".update").style.display = "block";
   }
 }
-function updateBlogPost(updateId) {
-  const postToEdit = blogPosts.find((post) => post.id === updateId);
+function updateBlogPost() {
+  const postToEdit = blogPosts.find((post) => post.id === window.updateId);
+  
 
   if (postToEdit) {
     postToEdit.title = inputUpdate.value;
-    postToEdit.text = inputUpdate.value;
+    postToEdit.text = textInputUpdate.value;
     localStorage.setItem("blogPosts", JSON.stringify(blogPosts));
     document.querySelector(".create").style.display = "block";
     document.querySelector(".update").style.display = "none";
@@ -87,5 +89,6 @@ blogForm.addEventListener("submit", function (event) {
 update.addEventListener("submit", (e) => {
   e.preventDefault();
   updateBlogPost();
-  console.log("hellooooo!!!!!!!!!!!");
+
+  location.reload();
 });
