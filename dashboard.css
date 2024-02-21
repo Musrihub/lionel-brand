@@ -53,6 +53,11 @@ a:hover {
 .aside-menu {
   display: flex;
 }
+.logout {
+  cursor: pointer;
+  color: rgb(233, 22, 22);
+  margin-top: 40px;
+}
 .dashbtn {
   margin-top: 60px;
   display: grid;
