@@ -21,8 +21,7 @@ form.addEventListener("submit", (event) => {
     if (!userExist) {
       users.push(newUser);
       localStorage.setItem("users", JSON.stringify(users));
-      window.location.href =
-        "file:///C:/Users/User/UI/MY-BRAND-LIONEL/login.html";
+      window.location.href = basePath + "login.html";
     } else {
       signUpError.innerHTML = "User Already Exist";
     }

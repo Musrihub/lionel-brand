@@ -1,6 +1,15 @@
 const form = document.querySelector("#create-account-form");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
+let users = JSON.parse(localStorage.getItem("users")) || [];
+const basePath = window.location.href.split("/").slice(0, -1).join("/") + "/";
+const message = document.querySelector(".error-message");
+const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+
+if (!isLoggedIn) {
+  const userLoggedIn = false;
+  localStorage.setItem("isLoggedIn", userLoggedIn);
+}
 
 form.addEventListener("submit", (event) => {
   validateForm();
@@ -69,16 +78,12 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   const userName = emailInput.value;
   const password = passwordInput.value;
+  const user = users.find((user) => user.email === userName);
 
-  const correctEmail = "linog02@gmail.com";
-  const correcPassword = "1234567890";
-
-  if (userName === correctEmail && password === correcPassword) {
-    localStorage.setItem("isLoggedIn", "true");
-    alert("login successfull");
-    window.location.href =
-      "file:///C:/Users/User/UI/MY-BRAND-LIONEL/dashboard.html";
+  if (user.email === userName && user.password === password) {
+    localStorage.setItem("isLoggedIn", true);
+    window.location.href = basePath + "dashboard.html";
   } else {
-    alert("incorrect username or password");
+    message.innerHTML = "Incorrect Email or Password";
   }
 });
