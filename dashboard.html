@@ -92,10 +92,25 @@
       </table>
     </article>
 
-    <script>
+    <!-- <script>
       if (!localStorage.getItem("isLoggedIn")) {
         window.location.href =
           "file:///C:/Users/User/UI/MY-BRAND-LIONEL/login.html";
+      }
+    </script> -->
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.open();
+          }
+        });
+      }
+
+      if (!localStorage.getItem("isLoggedIn")) {
+        window.netlifyIdentity.open();
       }
     </script>
   </body>
